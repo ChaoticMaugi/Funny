@@ -1,0 +1,20 @@
+We make a quadratic field like this:
+xxxxExxxxxExxxx
+x1111111111111x
+x1xx1xx1xx1xx1x
+x1xx1xx1xx1xx1x
+E1111111111111E
+x1xx1xx1xx1xx1x
+x1xx1xx1xx1xx1x
+E1111111111111E
+x1xx1xx1xx1xx1x
+x1xx1xx1xx1xx1x
+x1111111111111x
+xxxxExxxxxExxxx
+
+where 	x = Wall
+	1 = way
+	E = Exit
+Now the fun part is that the sailor starts at a given or random location and just starts to randomly walk in one of the four directions.
+The sailor is home when he reaches a given oder random exit.
+Let's see how he has to walk with a monte carlo simulation!!
