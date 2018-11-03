@@ -9,16 +9,12 @@ class board{
 	const static int HEIGHT = 20;
 	std::vector<std::vector<field> > blocks;
 
-private:
-	int randomInt(int, int); //gives random int between first and second integer
-
 public:
 	//board(int, int);
 	board();
 	std::vector<std::vector<field> > getBlocks();
 	int getHeight();
 	int getWidth();
-	void fillBoard(int, std::vector<person>);
 
 };
 

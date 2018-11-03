@@ -1,8 +1,8 @@
 Patient zero is a simulation like in plaque inc.
 One person starts to have an infection.
-The infection has a value for infection risk and severity. (this value is slitely different for each person, let's say +- 100% of the original %)
+The infection has a value for infection risk and severity. (this value is slitely different for each person, let's say +- 10% of the original %)
 The infection risk is the % that a person next to the already infected person gets infected. The severity is a damper for the ability of the person to cure the infection.
 A person has a healing ability. This is a % that the person can cure an infected person next to him.
-So each round every person moves first, then maybe infects a person next to him and finally tries to cure a person next to him.
+So each round every person moves first, then maybe infects the persons next to him and finally tries to cure one person next to him.
 The game is over once all the people are cured or infected.
 

@@ -15,6 +15,15 @@ public:
 	std::vector<person> getPersons();
 	void play();
 	void moveAndInfect();
+	void movePersons(int, int, int);
+	bool checkForInfectedNeighbour(int, int, int);
+	bool abilitySuccessful(float, int);
+	void castInfection(int, int, int);
+	void castHealing(int, int, int);
+	void changePersonInfected(int, int, int);
+	int numberOfInfected();
+	void fillBoard();
+	int randomInt(int, int);
 
 };
 

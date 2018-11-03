@@ -25,8 +25,8 @@ public:
 	int getPosY();
 	void setPosX(int);
 	void setPosY(int);
-	float setInfectious(float);
-	float setHealing(float);
+	void setInfectious(float);
+	void setHealing(float);
 
 };
 

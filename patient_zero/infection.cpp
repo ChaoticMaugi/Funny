@@ -22,12 +22,12 @@ float infection::getSeverity(){
 	return severity;
 }
 
-
+/*
 int main(){
-	/*infection fever;
+	infection fever;
 	infection numb(0.5, 0.1);
 	std::cout << fever.getInfectionRisk() << std::endl;
 	std::cout << numb.getInfectionRisk() << std::endl;
-	*/
 	return 0;
 }
+*/

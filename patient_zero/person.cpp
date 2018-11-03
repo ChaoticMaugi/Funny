@@ -11,8 +11,8 @@ person::person() {
 
 //constructor with input
 person::person(float infection_risk, float severity){
-	infectious = setInfectious(infection_risk);
-	healing = setHealing(severity);
+	setInfectious(infection_risk);
+	setHealing(severity);
 	infected = false;
 
 }
@@ -48,7 +48,7 @@ void person::setInfected(bool b){
 	infected = b;
 }
 
-float person::setInfectious(float infection_risk){
+void person::setInfectious(float infection_risk){
 	float inf; //returns infectious
 	float change = randomFloat();
 	float sign = change; //sign is between 0.0 and 1.0
@@ -67,14 +67,14 @@ float person::setInfectious(float infection_risk){
 	inf = infection_risk + sign * change;
 	
 	if(inf > 0.){
-		return inf;
+		infectious = inf;
 	}
 	else{
-		return 0.;
+		infectious = 0.;
 	}
 }
 
-float person::setHealing(float severity){
+void person::setHealing(float severity){
 	float heal; //returns healing
 	float healingI; //specific healing_basis of the person
 	
@@ -84,10 +84,10 @@ float person::setHealing(float severity){
 	heal = healingI - severity;
 
 	if(heal > 0.){
-		return heal;
+		healing = heal;
 	}
 	else{
-		return 0.;
+		healing = 0.;
 	}
 }
 
