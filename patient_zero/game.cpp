@@ -34,12 +34,12 @@ void game::fillBoard(){
 
 	randX = randomInt(0, playground.getWidth());
 	randY = randomInt(0, playground.getHeight());
-	std::cout << "y: " << randY << ", x: " << randX << std::endl;
 
 	for(int i = 0; i < Number_Persons; i++){ //for every person in persons
 		while(playground.getBlocks().at(randY).at(randX).getHasPerson() == true){ //while the field (randX, randY) is already owned, create new randX and randY
 			randX = randomInt(0, playground.getWidth());
 			randY = randomInt(0, playground.getHeight());
+			std::cout << "y: " << randY << ", x: " << randX << std::endl;
 		}
 		
 		std::cout << "y: " << randY << ", x: " << randX << std::endl;
