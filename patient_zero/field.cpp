@@ -3,6 +3,7 @@
 #include "person.h"
 
 field::field(){
+	std::cout << "field basic constructor is called" << std::endl;
 	hasPerson = false;
 }
 
@@ -11,12 +12,19 @@ field::field(bool b, person p){
 	setHasPerson(b);
 }
 
+field::field(bool b){
+	std::cout << "field constructor with bool input is called" << std::endl;
+	setHasPerson(b);
+}
+
 void field::setOwner(person p){
 	owner = p;
 }
 
 void field::setHasPerson(bool b){
+	//std::cout << "hasPerson will be set to: " << b << std::endl;
 	hasPerson = b;
+	//std::cout << "hasPerson after set: " << hasPerson << std::endl;
 }
 
 bool field::getHasPerson(){

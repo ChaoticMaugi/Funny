@@ -8,11 +8,20 @@
 #include "board.h"
 
 game::game(){
+	std::cout << "game basic constructor is called" << std::endl;
 	persons = std::vector<person>(Number_Persons);
+	fillPersonsVector();
+	playground = *(new board());
 }
 
 board game::getBoard(){
 	return playground;
+}
+
+void game::fillPersonsVector(){
+	for(int i = 0; i < Number_Persons; i++){
+		persons.push_back(*(new person(0.05, 0.2)));
+	}
 }
 
 std::vector<person> game::getPersons(){
@@ -20,9 +29,13 @@ std::vector<person> game::getPersons(){
 }
 
 void game::play(){
+	std::cout << "play before set: " << playground.getBlocks().at(0).at(0).getHasPerson() << std::endl;
+	playground.getBlocks().at(0).at(0).setHasPerson(true);
+	std::cout << "play after set: " << playground.getBlocks().at(0).at(0).getHasPerson() << std::endl;
+
 	fillBoard();
 	for(int i = 0; i < Number_Persons; i++){
-		std::cout << "y: " << persons.at(i).getPosY() << ", x: " << persons.at(i).getPosX() << std::endl;
+		std::cout << "after fill board: y: " << persons.at(i).getPosY() << ", x: " << persons.at(i).getPosX() << std::endl;
 	}
 	moveAndInfect();
 	std::cout << "Number of infected: " << numberOfInfected() << std::endl << "Number of healthy: " << (Number_Persons - numberOfInfected()) << std::endl;
@@ -39,15 +52,20 @@ void game::fillBoard(){
 		while(playground.getBlocks().at(randY).at(randX).getHasPerson() == true){ //while the field (randX, randY) is already owned, create new randX and randY
 			randX = randomInt(0, playground.getWidth());
 			randY = randomInt(0, playground.getHeight());
-			std::cout << "y: " << randY << ", x: " << randX << std::endl;
+			std::cout << "while loop in fill board: y: " << randY << ", x: " << randX << std::endl;
+			std::cout << "while loop in fill board: " << playground.getBlocks().at(randY).at(randX).getHasPerson() << std::endl;
 		}
 		
-		std::cout << "y: " << randY << ", x: " << randX << std::endl;
+		std::cout << "after while loop in fill board: y: " << randY << ", x: " << randX << std::endl;
 
 		playground.getBlocks().at(randY).at(randX).setOwner(persons.at(i));
+		std::cout << "before setting: " << playground.getBlocks().at(randY).at(randX).getHasPerson() << std::endl;
 		playground.getBlocks().at(randY).at(randX).setHasPerson(true);
+		std::cout << "after setting: " << playground.getBlocks().at(randY).at(randX).getHasPerson() << std::endl;
 		playground.getBlocks().at(randY).at(randX).getOwner().setPosX(randX);
 		playground.getBlocks().at(randY).at(randX).getOwner().setPosY(randY);
+
+		std::cout << "true: " << true << std::endl;
 	}
 }
 
@@ -161,7 +179,7 @@ void game::movePersons(int dx, int dy, int i){
 	std::cout << "dx: " << dx << " dy: " << dy << " i:  " << i << std::endl;
 	std::cout << "Height: " << playground.getHeight() << std::endl;
 	std::cout << "Width: " << playground.getWidth() << std::endl;
-	std::cout << "person y: " << persons.at(i).getPosY() << "person x: " << persons.at(i).getPosX() << std::endl;
+	std::cout << "person y: " << persons.at(i).getPosY() << " person x: " << persons.at(i).getPosX() << std::endl;
 	std::cout << playground.getBlocks()[persons.at(i).getPosY() + dy][persons.at(i).getPosX() + dx].getHasPerson() << std::endl;
 	if(playground.getBlocks().at(persons.at(i).getPosY() + dy).at(persons.at(i).getPosX() + dx).getHasPerson() == false){
 		playground.getBlocks().at(persons.at(i).getPosY() + dy).at(persons.at(i).getPosX() + dx).setOwner(persons.at(i)); //change owner of the new field

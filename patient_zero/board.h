@@ -15,6 +15,7 @@ public:
 	std::vector<std::vector<field> > getBlocks();
 	int getHeight();
 	int getWidth();
+	void fillBoard();
 
 };
 

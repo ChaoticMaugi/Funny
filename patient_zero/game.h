@@ -24,6 +24,7 @@ public:
 	int numberOfInfected();
 	void fillBoard();
 	int randomInt(int, int);
+	void fillPersonsVector();
 
 };
 

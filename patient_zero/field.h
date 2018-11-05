@@ -9,6 +9,7 @@ class field{
 public:
 	field();
 	field(bool, person);
+	field(bool);
 	bool getHasPerson();
 	person getOwner();
 	void setOwner(person);

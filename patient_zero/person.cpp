@@ -4,6 +4,7 @@
 
 //basic constructor
 person::person() {
+	std::cout << "person basic constructor is called" << std::endl;
 	infectious = 0.;
 	healing = 0.;
 	infected = false;
@@ -11,6 +12,7 @@ person::person() {
 
 //constructor with input
 person::person(float infection_risk, float severity){
+	std::cout << "person constructor with inputs is called" << std::endl;
 	setInfectious(infection_risk);
 	setHealing(severity);
 	infected = false;
