@@ -2,6 +2,7 @@
 #define PERSON_H
 
 class person{
+private:
 	float infectious;
 	float healing;
 	bool infected;
@@ -9,8 +10,6 @@ class person{
 	static const float MAX_HEAL = 0.7; //maximal healing ability without respect to severity
 	int pos_x;
 	int pos_y;
-
-private:
 	float randomFloat();
 
 public:

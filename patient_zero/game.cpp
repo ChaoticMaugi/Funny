@@ -10,18 +10,11 @@
 game::game(){
 	std::cout << "game basic constructor is called" << std::endl;
 	persons = std::vector<person>(Number_Persons);
-	fillPersonsVector();
-	playground = *(new board());
+	virus = *(new infection(0.7, 0.2));
 }
 
 board game::getBoard(){
 	return playground;
-}
-
-void game::fillPersonsVector(){
-	for(int i = 0; i < Number_Persons; i++){
-		persons.push_back(*(new person(0.05, 0.2)));
-	}
 }
 
 std::vector<person> game::getPersons(){
@@ -29,16 +22,28 @@ std::vector<person> game::getPersons(){
 }
 
 void game::play(){
+	/*
+	person p = person();
+	playground.getBlocks().at(0).at(0).setOwner(p);
+	*/
 	std::cout << "play before set: " << playground.getBlocks().at(0).at(0).getHasPerson() << std::endl;
 	playground.getBlocks().at(0).at(0).setHasPerson(true);
 	std::cout << "play after set: " << playground.getBlocks().at(0).at(0).getHasPerson() << std::endl;
+	std::cout << "should show value: " << true << std::endl;
+	playground.getBlocks().at(0).at(0).getOwner().setInfected(true);
+	std::cout << playground.getBlocks().at(0).at(0).getOwner().getInfected() << std::endl;
+	std::cout << "person on field: "; 
+	playground.getBlocks().at(0).at(0).getOwner().printPerson();
+	std::cout << std::endl;
 
+	/*
 	fillBoard();
 	for(int i = 0; i < Number_Persons; i++){
 		std::cout << "after fill board: y: " << persons.at(i).getPosY() << ", x: " << persons.at(i).getPosX() << std::endl;
 	}
 	moveAndInfect();
 	std::cout << "Number of infected: " << numberOfInfected() << std::endl << "Number of healthy: " << (Number_Persons - numberOfInfected()) << std::endl;
+	*/
 }
 
 void game::fillBoard(){

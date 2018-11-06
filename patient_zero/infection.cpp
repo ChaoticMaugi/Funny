@@ -3,12 +3,14 @@
 
 //basic constructor
 infection::infection(){
+	std::cout << "infection basic constructor is called" << std::endl;
 	infection_risk = 1.;
 	severity = 1.;
 }
 
 //constructor with inputs
 infection::infection(float inf, float sev){
+	std::cout << "infection constructor with inputs is called" << std::endl;
 	infection_risk = inf;
 	severity = sev;
 }

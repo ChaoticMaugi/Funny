@@ -4,6 +4,7 @@
 #include <vector>
 
 class board{
+private:
 	//height and width are declared here but should be variable
 	const static int WIDTH = 20;
 	const static int HEIGHT = 20;
@@ -15,8 +16,6 @@ public:
 	std::vector<std::vector<field> > getBlocks();
 	int getHeight();
 	int getWidth();
-	void fillBoard();
-
 };
 
 #endif

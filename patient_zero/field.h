@@ -3,6 +3,7 @@
 #include "person.h"
 
 class field{
+private:
 	bool hasPerson;
 	person owner;
 

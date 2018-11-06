@@ -14,18 +14,6 @@ board::board(int h, int w){
 board::board(){
 	std::cout << "board basic constructor is called" << std::endl;
 	blocks = std::vector<std::vector<field> >(HEIGHT, std::vector<field>(WIDTH));
-	fillBoard();
-
-}
-
-void board::fillBoard(){
-	for(int h = 0; h < HEIGHT; h++){
-		std::vector<field> temp = std::vector<field>(WIDTH);
-		for(int w = 0; w < WIDTH; w++){
-			temp.push_back(*(new field(false)));
-		}
-		blocks.push_back(temp);
-	}
 }
 
 std::vector<std::vector<field> > board::getBlocks(){

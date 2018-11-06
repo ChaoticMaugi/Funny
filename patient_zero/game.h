@@ -3,11 +3,14 @@
 #include <vector>
 #include "person.h"
 #include "board.h"
+#include "infection.h"
 
 class game{
+private:
 	const static int Number_Persons = 10; //change for more or fewer persons
 	std::vector<person> persons;
 	board playground;
+	infection virus;
 
 public:
 	game();
@@ -24,7 +27,6 @@ public:
 	int numberOfInfected();
 	void fillBoard();
 	int randomInt(int, int);
-	void fillPersonsVector();
 
 };
 

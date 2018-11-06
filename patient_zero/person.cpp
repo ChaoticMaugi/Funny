@@ -29,6 +29,7 @@ float person::getInfectious(){
 }
 
 bool person::getInfected(){
+	std::cout << "getInfected gives back: " << infected << std::endl;
 	return infected;
 }
 
@@ -47,7 +48,9 @@ void person::setPosY(int y){
 }
 
 void person::setInfected(bool b){
+	std::cout << "infected should be changed to: " << b << std::endl;
 	infected = b;
+	std::cout << "infected is now: " << infected << std::endl;
 }
 
 void person::setInfectious(float infection_risk){
