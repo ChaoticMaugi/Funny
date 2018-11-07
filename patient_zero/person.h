@@ -5,7 +5,7 @@ class person{
 private:
 	float infectious;
 	float healing;
-	bool infected;
+
 	static const float MIN_HEAL = 0.2; //minimal healing ability without respect to severity
 	static const float MAX_HEAL = 0.7; //maximal healing ability without respect to severity
 	int pos_x;
@@ -14,6 +14,7 @@ private:
 
 public:
 	person();
+	bool infected;
 	person(float, float);
 	float getHealing();
 	float getInfectious();

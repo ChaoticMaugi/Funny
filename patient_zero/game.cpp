@@ -26,12 +26,15 @@ void game::play(){
 	person p = person();
 	playground.getBlocks().at(0).at(0).setOwner(p);
 	*/
+	person person1 = person();
 	std::cout << "play before set: " << playground.getBlocks().at(0).at(0).getHasPerson() << std::endl;
-	playground.getBlocks().at(0).at(0).setHasPerson(true);
+	//playground.getBlocks().at(0).at(0).setHasPerson(true);
+	playground.getBlocks().at(0).at(0).setOwner(person1);
 	std::cout << "play after set: " << playground.getBlocks().at(0).at(0).getHasPerson() << std::endl;
 	std::cout << "should show value: " << true << std::endl;
 	playground.getBlocks().at(0).at(0).getOwner().setInfected(true);
 	std::cout << playground.getBlocks().at(0).at(0).getOwner().getInfected() << std::endl;
+	std::cout << playground.getBlocks().at(0).at(0).getOwner().infected << std::endl;
 	std::cout << "person on field: "; 
 	playground.getBlocks().at(0).at(0).getOwner().printPerson();
 	std::cout << std::endl;

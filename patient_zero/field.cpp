@@ -2,8 +2,9 @@
 #include "field.h"
 #include "person.h"
 
-field::field(){
+field::field(int id){
 	std::cout << "field basic constructor is called" << std::endl;
+	this->id = id;
 	hasPerson = false;
 }
 
@@ -19,6 +20,7 @@ field::field(bool b){
 
 void field::setOwner(person p){
 	owner = p;
+	hasPerson = true;
 }
 
 void field::setHasPerson(bool b){
