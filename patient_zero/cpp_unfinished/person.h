@@ -6,8 +6,8 @@ private:
 	float infectious;
 	float healing;
 
-	static const float MIN_HEAL = 0.2; //minimal healing ability without respect to severity
-	static const float MAX_HEAL = 0.7; //maximal healing ability without respect to severity
+	static const float MIN_HEAL; //minimal healing ability without respect to severity
+	static const float MAX_HEAL; //maximal healing ability without respect to severity
 	int pos_x;
 	int pos_y;
 	float randomFloat();

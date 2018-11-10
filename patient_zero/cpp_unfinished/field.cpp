@@ -2,8 +2,13 @@
 #include "field.h"
 #include "person.h"
 
-field::field(int id){
+field::field() {
 	std::cout << "field basic constructor is called" << std::endl;
+	hasPerson = false;
+}
+
+field::field(int id){
+	std::cout << "field constructor with input is called" << std::endl;
 	this->id = id;
 	hasPerson = false;
 }

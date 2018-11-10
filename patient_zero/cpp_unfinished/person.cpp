@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include "person.h"
 
+//define constants
+const float person::MIN_HEAL = 0.2;
+const float person::MAX_HEAL = 0.7;
+
 //basic constructor
 person::person() {
 	std::cout << "person basic constructor is called" << std::endl;

@@ -8,6 +8,7 @@ private:
 	person owner;
 
 public:
+	field();
 	field(int);
 	int id;
 	field(bool, person);

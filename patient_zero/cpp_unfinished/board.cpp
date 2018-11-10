@@ -13,7 +13,7 @@ board::board(int h, int w){
 
 board::board(){
 	std::cout << "board basic constructor is called" << std::endl;
-	//blocks = std::vector<std::vector<field> >(HEIGHT, std::vector<field>(WIDTH));
+	blocks = std::vector<std::vector<field> >(HEIGHT, std::vector<field>(WIDTH));
 	field* block1 = new field(1);
 	std::cout << "block id " << (*(block1)).id << std::endl;
 	std::cout << "Haaalo1" << std::endl;

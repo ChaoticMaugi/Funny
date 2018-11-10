@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <stdlib.h>
+#include <time.h>
 #include "game.h"
 #include "infection.h"
 #include "person.h"
