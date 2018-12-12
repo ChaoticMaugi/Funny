@@ -1,0 +1,19 @@
+Darwin land
+In Darwin land there will be fauna, so trees, bushes, grass and so on. Additionally there will be water around.
+Now to the living creatures. A creature has to eat and drink in order to survive.
+Drinking:
+Creatures have to drink. They move randomly in the land unless they get hungry or thirsty. There is a index to show their thirst. If the thirst gets higher the probability for the creature to move back to its last visited water source in the land gets higher. So at some point it is literally drawn to the water. Not all creatures can swim from the beginning but it is possible to learn or forget this ability. Some factors are danger zones, not enough food around and/or other things.
+Eating:
+Creatures are default meat-eater, plant-eater or everything-eater. This attribute can vary with time because of nutrition problems and/or just luck.
+Moving:
+Creatures move randomly around per default. But there are factors, which have an effect on the chances to move in a specific direction. If a creature gets thirsty it is more likely to move in the direction of the last water source it found. Then there is a danger zone for each creature. This means that the creature was attacked or something in that specific field, so it will not so likely go back there. But there is a factor courage (NAME CHANGING) that blocks negative effects like danger zones. But it also does slitely negate the effect of the thirst. So a creature can die from a too high courage value.
+Plants:
+There are different sort of plants: Grass, Bush, Tree. All of them can start to grow and create new plants around, but they also die at some point. But the chance of dying without spreading is not high. But plants can and will be eaten from creatures. It is important that each plant has a sort (grass, bush, tree) and a foodstock, which indicates how much of the plant is still there. On a bush you will find more food than in grass. If the plant is eaten entirely it will die. Plants will not have the ability to be aggressive towards other plants, because this logic is already used in the logic of the creatures and would therefore exeed this simulation. There is even a pretty small chance that a plant starts to grow on water, but this chance is really small and creatures can still drink water from underneath the plant.
+DNA:
+In this simulation recreation also plays an important role, because creatures can die from "old" age and before that they might have the urge to reproduce themselves in order to let their species go on. In this case the child will have attributes similar to its parents but if the parents were clearly different this would lead to a hybrid species. Creatures can reproduce with any other creature without paying respect to their race. 
+Water:
+The water in the land is not just still, it has a life of its own. It starts at some point and can move and change quantity of each field. A water field can be destroyed during summer and created during winter (it can both in both seasons, but the probabilities are different).
+Weather:
+Believe it or not, there is weather in darwin land! Well, weather is not that correct because there are two seasons: Winter and summer. In winter water spreads more easily and is more refilled per turn, plants grow better and spread more. In winter creatures are more hungry and they are calmer in general and reproduce more often. In summer there is less water, plants spread less and water gets drained faster from the land. Creatures are more aggressive and are thirstier.
+Fighting:
+Creatures can fight with creatures near them. Maybe they are hungry (corpses can be eaten) or they just want to fight (aggressive). Creatures have a specific health pool and so if the health pool gets to 0 the creature dies. But the health pool does refill with each turn (more in winter and less in summer). 
