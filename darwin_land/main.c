@@ -117,6 +117,18 @@ void setWaterId(Water* w) {
 	id_counter_water++;
 }
 
+void createChildCreature(Creature dad, Creature mom, Creature* kid) {
+
+}
+
+void createChildPlant(Plant parent, Plant* kid) {
+
+}
+
+void createChildWater(Water parent, Water* kid) {
+
+}
+
 /* simulation start */
 void play() {
 
